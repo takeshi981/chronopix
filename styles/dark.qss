@@ -1,0 +1,252 @@
+/* ------------------------------
+   GLOBAL
+--------------------------------*/
+QWidget {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: "Segoe UI", "Inter", sans-serif;
+}
+
+/* ------------------------------
+   SCROLL AREA
+--------------------------------*/
+QScrollArea {
+    border: none;
+    background-color: #121212;
+}
+
+QScrollBar:vertical {
+    background: #1e1e1e;
+    width: 10px;
+    margin: 0px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical {
+    background: #3a3a3a;
+    min-height: 40px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #505050;
+}
+
+QScrollBar::add-line,
+QScrollBar::sub-line {
+    height: 0px;
+}
+
+/* ------------------------------
+   SIDEBAR
+--------------------------------*/
+#Sidebar {
+    background-color: #1a1a1a;
+    border-right: 1px solid #2a2a2a;
+}
+
+#Sidebar QPushButton {
+    background-color: transparent;
+    color: #e0e0e0;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    font-size: 15px;
+}
+
+#Sidebar QPushButton:hover {
+    background-color: #2a2a2a;
+}
+
+/* ------------------------------
+   SCRUBBER (right bar)
+--------------------------------*/
+#Scrubber {
+    background-color: #1a1a1a;
+    border-left: 1px solid #2a2a2a;
+}
+
+#Scrubber QPushButton {
+    background-color: transparent;
+    color: #c0c0c0;
+    padding: 6px 10px;
+    text-align: left;
+    border: none;
+}
+
+#Scrubber QPushButton:hover {
+    background-color: #2a2a2a;
+    color: white;
+}
+
+#Scrubber QLabel {
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* ------------------------------
+   TIMELINE HEADERS
+--------------------------------*/
+.YearHeader {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 20px 0 10px 10px;
+}
+
+.MonthHeader {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e0e0e0;
+    margin-left: 10px;
+}
+
+/* ------------------------------
+   COLLAPSIBLE MONTH
+--------------------------------*/
+.CollapsibleMonth QPushButton {
+    background-color: #2a2a2a;
+    border-radius: 6px;
+    padding: 4px 10px;
+    color: #e0e0e0;
+}
+
+.CollapsibleMonth QPushButton:hover {
+    background-color: #3a3a3a;
+}
+
+/* Separator line */
+QFrame[frameShape="4"] {
+    color: #333333;
+    background-color: #333333;
+    height: 1px;
+}
+
+/* ------------------------------
+   PHOTO WIDGET
+--------------------------------*/
+.PhotoWidget {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 0px;
+}
+
+.PhotoWidget:hover {
+    background-color: #2a2a2a;
+}
+
+/* ------------------------------
+   BUTTONS (Scan Folder etc.)
+--------------------------------*/
+QPushButton {
+    background-color: #2a2a2a;
+    border-radius: 6px;
+    padding: 8px 14px;
+    color: #e0e0e0;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #3a3a3a;
+}
+#ScanButton {
+    background-color: #2a2a2a;
+    border-radius: 6px;
+    padding: 8px 14px;
+    color: #e0e0e0;
+}
+#TimelineView {
+    background-color: #121212;
+}
+QMenuBar {
+    background-color: #1e1e1e;
+    color: #dddddd;
+}
+
+QMenuBar::item {
+    padding: 6px 12px;
+    background: transparent;
+}
+
+QMenuBar::item:selected {
+    background: #333333;
+}
+
+QMenu {
+    background-color: #1e1e1e;
+    color: #dddddd;
+    border: 1px solid #444444;
+}
+
+QMenu::item:selected {
+    background-color: #333333;
+}
+QComboBox::drop-down {
+    border: none;
+}
+
+QCheckBox {
+    color: #dddddd;
+    spacing: 8px;
+}
+/* 1. Combined all container backgrounds to ensure total visual consistency */
+QWidget#ScrubberContainer,
+QWidget#ScrubberContent, 
+QScrollArea#ScrubberScrollArea {
+    background-color: #121212; /* Deep dark theme background */
+}
+
+/* 2. Moved the min-width directly to the main container block */
+QWidget#ScrubberContainer {
+    min-width: 120px;
+    max-width: 120px; /* Optional: Locks the width so it stays a clean sidebar */
+}
+
+/* Scrollbar styling */
+QScrollArea#ScrubberScrollArea QScrollBar:vertical {
+    background: transparent;
+    width: 4px; /* Ensure width is explicitly defined here as well */
+}
+QScrollArea#ScrubberScrollArea QScrollBar::handle:vertical {
+    background: #555555;
+    border-radius: 2px;
+}
+QScrollArea#ScrubberScrollArea QScrollBar::handle:vertical:hover {
+    background: #888888;
+}
+
+/* Year Label - Using standard class selector syntax */
+QLabel.scrubber-year {
+    color: #e3e3e3;
+    background: transparent;
+}
+
+/* Month Button States - Using standard class selector syntax */
+QPushButton.scrubber-month {
+    padding-left: 6px;
+    padding-right: 2px;
+    padding-bottom: 0px;
+    color: #aaaaaa;
+    background-color: transparent;
+    text-align: left; /* Kept text alignment secure on the QSS side */
+}
+QPushButton.scrubber-month:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+}
+QPushButton.scrubber-month:pressed {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.photo-overlay-btn {
+    background-color: transparent;
+    background: transparent;
+    border: none;
+}
+
+/* Opzionale: se vuoi un leggero feedback visivo circolare o morbido al passaggio del mouse */
+.photo-overlay-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Sfondo semi-trasparente */
+    border-radius: 16px; /* Metà di 32px per farlo diventare un cerchio perfetto */
+}

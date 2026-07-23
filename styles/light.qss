@@ -1,0 +1,301 @@
+/* ------------------------------
+   GLOBAL
+--------------------------------*/
+QWidget {
+    background-color: #f8f9fa; /* Sfondo principale chiaro */
+    color: #212529;            /* Testo scuro anziché chiaro */
+    font-family: "Segoe UI", "Inter", sans-serif;
+}
+
+/* ------------------------------
+   SCROLL AREA
+--------------------------------*/
+QScrollArea {
+    border: none;
+    background-color: #f8f9fa;
+}
+
+QScrollBar:vertical {
+    background: #e9ecef;       /* Binario scorrimento chiaro */
+    width: 10px;
+    margin: 0px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical {
+    background: #ced4da;       /* Maniglia grigia media */
+    min-height: 40px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #adb5bd;       /* Maniglia più scura al passaggio del mouse */
+}
+
+QScrollBar::add-line,
+QScrollBar::sub-line {
+    height: 0px;
+}
+
+/* ------------------------------
+   SIDEBAR
+--------------------------------*/
+#Sidebar {
+    background-color: #ffffff; /* Sidebar bianca per staccare dallo sfondo */
+    border-right: 1px solid #e0e0e0;
+}
+
+#Sidebar QPushButton {
+    background-color: transparent;
+    color: #495057;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    font-size: 15px;
+}
+
+#Sidebar QPushButton:hover {
+    background-color: #f1f3f5; /* Hover grigio chiarissimo */
+    color: #000000;
+}
+
+/* ------------------------------
+   SCRUBBER (right bar)
+--------------------------------*/
+#Scrubber {
+    background-color: #ffffff;
+    border-left: 1px solid #e0e0e0;
+}
+
+#Scrubber QPushButton {
+    background-color: transparent;
+    color: #495057;
+    padding: 6px 10px;
+    text-align: left;
+    border: none;
+}
+
+#Scrubber QPushButton:hover {
+    background-color: #f1f3f5;
+    color: #000000;
+}
+
+#Scrubber QLabel {
+    color: #212529;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* ------------------------------
+   TIMELINE HEADERS
+--------------------------------*/
+.YearHeader {
+    font-size: 28px;
+    font-weight: bold;
+    color: #212529;
+    margin: 20px 0 10px 10px;
+}
+
+.MonthHeader {
+    font-size: 20px;
+    font-weight: bold;
+    color: #495057;
+    margin-left: 10px;
+}
+
+/* ------------------------------
+   COLLAPSIBLE MONTH
+--------------------------------*/
+.CollapsibleMonth QPushButton {
+    background-color: #e9ecef;
+    border-radius: 6px;
+    padding: 4px 10px;
+    color: #212529;
+}
+
+.CollapsibleMonth QPushButton:hover {
+    background-color: #dee2e6;
+}
+
+/* Separator line */
+QFrame[frameShape="4"] {
+    color: #dee2e6;
+    background-color: #dee2e6;
+    height: 1px;
+}
+
+/* ------------------------------
+   PHOTO WIDGET
+--------------------------------*/
+.PhotoWidget {
+    background-color: #ffffff; /* Card fotografiche bianche */
+    border-radius: 8px;
+    padding: 0px;
+    border: 1px solid #e9ecef; /* Leggero bordo per definire le card sul bianco */
+}
+
+.PhotoWidget:hover {
+    background-color: #f8f9fa;
+    border-color: #ced4da;
+}
+
+/* ------------------------------
+   BUTTONS (Scan Folder etc.)
+--------------------------------*/
+QPushButton {
+    background-color: #e9ecef;
+    border-radius: 6px;
+    padding: 8px 14px;
+    color: #212529;
+    font-size: 14px;
+    border: 1px solid #dee2e6;
+}
+
+QPushButton:hover {
+    background-color: #dee2e6;
+}
+
+#ScanButton {
+    background-color: #e9ecef;
+    border-radius: 6px;
+    padding: 8px 14px;
+    color: #212529;
+    border: 1px solid #dee2e6;
+}
+
+#TimelineView {
+    background-color: #f8f9fa;
+}
+
+/* ------------------------------
+   MENU BAR
+--------------------------------*/
+QMenuBar {
+    background-color: #ffffff;
+    color: #212529;
+    border-bottom: 1px solid #dee2e6;
+}
+
+QMenuBar::item {
+    padding: 6px 12px;
+    background: transparent;
+}
+
+QMenuBar::item:selected {
+    background: #f1f3f5;
+}
+
+QMenu {
+    background-color: #ffffff;
+    color: #212529;
+    border: 1px solid #ced4da;
+}
+
+QMenu::item:selected {
+    background-color: #f1f3f5;
+}
+
+/* ------------------------------
+   SETTINGS PAGE EXTRAS (QGroupBox, QComboBox, QCheckBox)
+--------------------------------*/
+QGroupBox {
+    font-weight: bold;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    margin-top: 12px;
+    padding-top: 16px;
+    background-color: #ffffff;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    left: 10px;
+    padding: 0 3px;
+    color: #495057;
+}
+
+QComboBox {
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 4px 8px;
+    color: #212529;
+    min-width: 100px;
+}
+
+QComboBox:hover {
+    border-color: #adb5bd;
+}
+
+QComboBox::drop-down {
+    border: none;
+}
+
+QCheckBox {
+    color: #212529;
+    spacing: 8px;
+}
+/* Light mode variant */
+QWidget#ScrubberContainer,
+QWidget#ScrubberContent, 
+QScrollArea#ScrubberScrollArea {
+    background-color: #ffffff; 
+}
+
+QWidget#ScrubberContainer {
+    min-width: 120px;
+    max-width: 120px;
+}
+
+QScrollArea#ScrubberScrollArea QScrollBar:vertical {
+    background: transparent;
+    width: 4px;
+}
+QScrollArea#ScrubberScrollArea QScrollBar::handle:vertical {
+    background: #cccccc;
+    border-radius: 2px;
+}
+QScrollArea#ScrubberScrollArea QScrollBar::handle:vertical:hover {
+    background: #999999;
+}
+
+QLabel.scrubber-year {
+    color: #1f1f1f;
+    background: transparent;
+}
+
+QPushButton.scrubber-month {
+    padding-left: 6px;
+    padding-right: 2px;
+    padding-bottom: 0px;
+    color: #5f6368;
+    background-color: transparent;
+    text-align: left;
+}
+QPushButton.scrubber-month:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+    color: #1a73e8; /* Google Blue accent */
+}
+QPushButton.scrubber-month:pressed {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+/* Pulsanti overlay sulle foto */
+QPushButton.photo-overlay-btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.photo-overlay-btn {
+    background-color: transparent;
+    background: transparent;
+    border: none;
+}
+
+/* Opzionale: se vuoi un leggero feedback visivo circolare o morbido al passaggio del mouse */
+.photo-overlay-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Sfondo semi-trasparente */
+    border-radius: 16px; /* Metà di 32px per farlo diventare un cerchio perfetto */
+}
+
